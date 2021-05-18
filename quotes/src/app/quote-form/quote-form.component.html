@@ -1,1 +1,24 @@
-<p>quote-form works!</p>
+<h1>Add a quote</h1>
+<div>
+	<form (ngSubmit)='submitMessage()'>
+		<p>Please add a quote here.</p>
+		<input type="text" name="name" autocomplete="off" placeholder="Enter your name ..." [(ngModel)]="quoteName" class="form-control ">
+		<input type="text" name="author" autocomplete="off" placeholder="Enter a quote..." [(ngModel)]="quoteAuthor"  class="form-control ">
+		<textarea class="form-control " name="messages" id="" cols="30" rows="10" type="text" [(ngModel)]="quoteMessage" autocomplete="off"></textarea>
+		<button type="submit" class="btn btn-outline-success btn-lg">SUBMIT!</button>
+	</form>
+	<hr>
+	<div>
+		<p>Name: <span>{{quoteName}}</span></p>
+		<p>Email: <span>{{quoteAuthor}}</span></p>
+		<p> {{quoteMessage}} </p>
+	</div>
+	<hr>
+	<div>
+		<div *ngFor='let message of messages'>
+			<h5 > {{message.quotetName}} </h5> 
+			<p>  {{message.quotetEmail}} </p>
+			<small>  {{message.quotetMessage}} </small>
+		</div>
+	</div>
+
