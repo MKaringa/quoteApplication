@@ -5,7 +5,7 @@ An Angular built website with a list of quotes. One can add, delete, upvote or d
 ## Mungai Karinga
 
 # Demo
-Here is a link to a live working demo https://mkaringa.github.io/delaniStudiios/
+Here is a link to a live working demo https://mkaringa.github.io/quoteApplication/
 
 # Site
 
