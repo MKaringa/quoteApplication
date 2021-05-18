@@ -14,6 +14,7 @@
             <h5>{{quote.blogger}}</h5>
             <h5>{{quote.postingDate}}</h5>
             <h5>{{quote.clickCounter}}</h5>
+            <app-quote-detail *ngIf="quote.showDescription" [quote]='quote'></app-quote-detail>
 
           </div>
           
