@@ -10,15 +10,22 @@ import { Messages } from '../messages';
 export class QuoteFormComponent implements OnInit {
 
 
-  quoteName: String | undefined;
-  quoteAuthor: String | undefined;
-  quoteMessage: String | undefined;
-  published: Date | undefined;
+  quoteName: string ;
+  quoteAuthor: string ;
+  quoteMessage: string;
+  published: Date ;
   newMessage: any;
 
   messages = [
     new Messages ('Mungai', 'Einsten', 'Quantum mechanics is wrong in so many ways', new Date())
   ]
+
+
+  submitMessage(){
+    this.newMessage = new Messages(this.quoteName, this.quoteAuthor, this.quoteMessage, new Date ())
+    this.messages.push(this.newMessage)
+
+  }
 
   constructor() { }
 
